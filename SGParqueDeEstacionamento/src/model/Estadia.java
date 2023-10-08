@@ -1,6 +1,6 @@
 package model;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,9 +16,9 @@ public class Estadia {
     private Cliente cliente;
     private Veiculo veiculo;
     @Temporal(TemporalType.DATE)
-    private Date data_entrada;
+    private LocalDateTime dataEntrada = LocalDateTime.now();
     @Temporal(TemporalType.DATE)
-    private Date data_saida;
+    private LocalDateTime dataSaida;
     private boolean estado;
 
     public boolean isEstado() {
@@ -45,20 +45,20 @@ public class Estadia {
         this.veiculo = veiculo;
     }
 
-    public Date getData_entrada() {
-        return data_entrada;
+    public LocalDateTime getData_entrada() {
+        return dataEntrada;
     }
 
-    public void setData_entrada(Date data_entrada) {
-        this.data_entrada = data_entrada;
+    public void setData_entrada(LocalDateTime data_entrada) {
+        this.dataEntrada = data_entrada;
     }
 
-    public Date getData_saida() {
-        return data_saida;
+    public LocalDateTime getData_saida() {
+        return dataSaida;
     }
 
-    public void setData_saida(Date data_saida) {
-        this.data_saida = data_saida;
+    public void setData_saida(LocalDateTime data_saida) {
+        this.dataSaida = data_saida;
     }
     
     

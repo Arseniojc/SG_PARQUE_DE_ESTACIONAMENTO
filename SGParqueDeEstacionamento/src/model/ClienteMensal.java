@@ -1,6 +1,11 @@
 package model;
 
-public class ClienteMensal {
+import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
+
+@Entity
+@PrimaryKeyJoinColumn(name = "id")
+public class ClienteMensal extends Cliente{
 
     private double taxaMensal;
     private double bonus;

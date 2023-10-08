@@ -3,6 +3,10 @@
   <persistence-unit name="SGParqueEstacionamentoPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>model.Veiculo</class>
+    <class>model.Cliente</class>
+    <class>model.ClienteDiario</class>
+    <class>model.ClienteMensal</class>
+    <class>model.Estadia</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dbsgparqueestacionamento?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

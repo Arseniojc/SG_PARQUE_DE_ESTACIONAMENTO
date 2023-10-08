@@ -1,9 +1,13 @@
 package model;
 
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
 
-
-public class ClienteDiario {
+@Entity
+@Table (name = "Cliente Diario")
+@PrimaryKeyJoinColumn(name ="id")
+public class ClienteDiario extends Cliente{
 
     private double taxa_hora;
     private double tempo_estadia;
