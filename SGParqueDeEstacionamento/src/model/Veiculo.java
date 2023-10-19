@@ -16,7 +16,13 @@ public class Veiculo {
     private String modelo;
     private String cor;
     private String tipo_veiculo;
+    private boolean estado;
 
+    public Veiculo() {
+        this.estado = true;
+    }
+
+    
     public int getId_veiculo() {
         return id_veiculo;
     }
@@ -63,6 +69,14 @@ public class Veiculo {
 
     public void setTipo_veiculo(String tipo_veiculo) {
         this.tipo_veiculo = tipo_veiculo;
+    }
+
+    public boolean getEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
     
     

@@ -10,7 +10,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 public class Estadia {
-    
+     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Cliente cliente;
