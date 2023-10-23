@@ -5,49 +5,53 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
-import model.Veiculo;
+import model.ClienteMensal;
 
-public class VeiculoDAO {
 
+public class ClienteMensalDao {
+    
     private EntityManager em;
     private EntityManagerFactory emf;
     
-    public VeiculoDAO(){
+    public ClienteMensalDao(){
         emf = Persistence.createEntityManagerFactory("ParqueUP");
         em = emf.createEntityManager();
     }
     
-    public void inserir(Veiculo veiculo){
+    public ClienteMensal salvarClienteM(ClienteMensal cliente){
+        
         try {
             em.getTransaction().begin();
-            em.persist(veiculo);
+            em.persist(cliente);
             em.getTransaction().commit();
+            System.out.println("Dados salvos com sucesso!");
         } catch (Exception e) {
             em.getTransaction().rollback();
         } finally {
             em.close();
-            emf.close();
         }
-    }
-    
-    public List<Veiculo> listar(){
-        em.getTransaction().begin();
-        String jpql = "SELECT v FROM Veiculo v";
-        Query query = em.createQuery(jpql);
-        return query.getResultList();
-    }
-    
-    public void listarVeiculo(){
         
-        for(Veiculo veiculos: listar()){
-            System.out.println("Marca: " + veiculos.getModelo() );
-        }
+        return cliente;
     }
     
-    public void actualizar(Veiculo veiculo) throws Exception{
+    
+    public ClienteMensal pesquisar(int id) throws Exception{
+        
+        ClienteMensal clienteM = null;
+        
+        try {
+            clienteM = em.find(ClienteMensal.class, id);
+        } catch (Exception e) {
+            throw new Exception("Nao foi localizado um Cliente com o ID informado");
+        } finally {
+        }
+        return clienteM;
+    }
+    
+     public void actualizar(ClienteMensal clienteM) throws Exception{
         try {
             em.getTransaction().begin();
-            em.merge(veiculo);
+            em.merge(clienteM);
             em.getTransaction().commit();
             System.out.println("Dados Actualizados com sucesso.");
         } catch (Exception e) {
@@ -57,25 +61,12 @@ public class VeiculoDAO {
         }
     }
     
-    public Veiculo pesquisar(int id) throws Exception{
-        
-        Veiculo veiculo = null;
-        
-        try {
-            veiculo = em.find(Veiculo.class, id);
-        } catch (Exception e) {
-            throw new Exception("Nao foi localizado um veiculo com o ID informado");
-        } finally {
-        }
-        return veiculo;
-    }
-    
     public void deletar(int id) throws Exception{
         try {
             em.getTransaction().begin();
-            Veiculo veiculo = em.find(Veiculo.class, id);
-            veiculo.setEstado(false);
-            em.merge(veiculo);
+            ClienteMensal clienteM = em.find(ClienteMensal.class, id);
+            clienteM.setEstado(false);
+            em.merge(clienteM);
             em.getTransaction().commit();
         } catch (Exception e) {
             throw new Exception("Erro na eliminacao do veiculo");
@@ -83,4 +74,6 @@ public class VeiculoDAO {
             em.close();
         }
     }
+    
+    
 }

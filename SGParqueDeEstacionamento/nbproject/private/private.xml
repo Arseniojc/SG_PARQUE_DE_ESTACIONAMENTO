@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Arsenio-JC/Documents/GitHub/SG_PARQUE_DE_ESTACIONAMENTO/SGParqueDeEstacionamento/src/view/TelaLogin.java</file>
+            <file>file:/C:/Users/Arsenio-JC/Documents/GitHub/SG_PARQUE_DE_ESTACIONAMENTO/SGParqueDeEstacionamento/src/model/ClienteDiario.java</file>
+            <file>file:/C:/Users/Arsenio-JC/Documents/GitHub/SG_PARQUE_DE_ESTACIONAMENTO/SGParqueDeEstacionamento/src/view/TelaCadastroVeiculo.java</file>
+            <file>file:/C:/Users/Arsenio-JC/Documents/GitHub/SG_PARQUE_DE_ESTACIONAMENTO/SGParqueDeEstacionamento/src/view/TelaCadastroClienteMensal.java</file>
             <file>file:/C:/Users/Arsenio-JC/Documents/GitHub/SG_PARQUE_DE_ESTACIONAMENTO/SGParqueDeEstacionamento/src/dao/VeiculoDAO.java</file>
-            <file>file:/C:/Users/Arsenio-JC/Documents/GitHub/SG_PARQUE_DE_ESTACIONAMENTO/SGParqueDeEstacionamento/src/view/TelaMenu.java</file>
-            <file>file:/C:/Users/Arsenio-JC/Documents/GitHub/SG_PARQUE_DE_ESTACIONAMENTO/SGParqueDeEstacionamento/src/view/TelaCadastroEstadia.java</file>
+            <file>file:/C:/Users/Arsenio-JC/Documents/GitHub/SG_PARQUE_DE_ESTACIONAMENTO/SGParqueDeEstacionamento/src/META-INF/persistence.xml</file>
+            <file>file:/C:/Users/Arsenio-JC/Documents/GitHub/SG_PARQUE_DE_ESTACIONAMENTO/SGParqueDeEstacionamento/src/model/ClienteMensal.java</file>
+            <file>file:/C:/Users/Arsenio-JC/Documents/GitHub/SG_PARQUE_DE_ESTACIONAMENTO/SGParqueDeEstacionamento/src/model/Veiculo.java</file>
             <file>file:/C:/Users/Arsenio-JC/Documents/GitHub/SG_PARQUE_DE_ESTACIONAMENTO/SGParqueDeEstacionamento/src/view/Teste.java</file>
         </group>
     </open-files>

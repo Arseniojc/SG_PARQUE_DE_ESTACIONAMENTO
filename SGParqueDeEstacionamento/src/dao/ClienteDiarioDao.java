@@ -11,7 +11,7 @@ public class ClienteDiarioDao {
     private EntityManagerFactory emf;
     
     public ClienteDiarioDao(){
-        emf = Persistence.createEntityManagerFactory("SGParqueEstacionamentoPU");
+        emf = Persistence.createEntityManagerFactory("ParqueUP");
         em = emf.createEntityManager();
     }
     
