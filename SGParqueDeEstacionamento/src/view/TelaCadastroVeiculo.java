@@ -4,9 +4,15 @@
  */
 package view;
 
+import Controller.VeiculoController;
 import dao.VeiculoDAO;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import model.Veiculo;
 
@@ -25,6 +31,88 @@ public class TelaCadastroVeiculo extends javax.swing.JFrame {
        
     }
 
+    public List<Veiculo> getListaVeiculos() {
+        return listaVeiculos;
+    }
+
+    public void setListaVeiculos(List<Veiculo> listaVeiculos) {
+        this.listaVeiculos = listaVeiculos;
+    }
+
+    public Veiculo getVeiculo() {
+        return veiculo;
+    }
+
+    public void setVeiculo(Veiculo veiculo) {
+        this.veiculo = veiculo;
+    }
+
+    public JButton getBtnSalvar() {
+        return btnSalvar;
+    }
+
+    public void setBtnSalvar(JButton btnSalvar) {
+        this.btnSalvar = btnSalvar;
+    }
+
+    public ButtonGroup getBtnTipoVeiculo() {
+        return btnTipoVeiculo;
+    }
+
+    public void setBtnTipoVeiculo(ButtonGroup btnTipoVeiculo) {
+        this.btnTipoVeiculo = btnTipoVeiculo;
+    }
+
+    public JComboBox<String> getCombTipoVeiculos() {
+        return combTipoVeiculos;
+    }
+
+    public void setCombTipoVeiculos(JComboBox<String> combTipoVeiculos) {
+        this.combTipoVeiculos = combTipoVeiculos;
+    }
+
+    public JTable getTabela() {
+        return tabela;
+    }
+
+    public void setTabela(JTable tabela) {
+        this.tabela = tabela;
+    }
+
+    public JTextField getTxtCor() {
+        return txtCor;
+    }
+
+    public void setTxtCor(JTextField txtCor) {
+        this.txtCor = txtCor;
+    }
+
+    public JTextField getTxtMarca() {
+        return txtMarca;
+    }
+
+    public void setTxtMarca(JTextField txtMarca) {
+        this.txtMarca = txtMarca;
+    }
+
+    public JTextField getTxtMatricula() {
+        return txtMatricula;
+    }
+
+    public void setTxtMatricula(JTextField txtMatricula) {
+        this.txtMatricula = txtMatricula;
+    }
+
+    public JTextField getTxtModelo() {
+        return txtModelo;
+    }
+
+    public void setTxtModelo(JTextField txtModelo) {
+        this.txtModelo = txtModelo;
+    }
+
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -281,15 +369,12 @@ public class TelaCadastroVeiculo extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-
         
-        
-        adicionarIteins();
-        adicionarTabela();
-        adicionarDB();
+        VeiculoController controller = new VeiculoController();
         
     }//GEN-LAST:event_btnSalvarActionPerformed
 
@@ -355,8 +440,9 @@ public class TelaCadastroVeiculo extends javax.swing.JFrame {
     private javax.swing.JTextField txtMatricula;
     private javax.swing.JTextField txtModelo;
     // End of variables declaration//GEN-END:variables
-
-                
+    
+    /*
+        // Metodo para Pegar dados da Interface        
         private void adicionarIteins(){
             veiculo.setCor(txtCor.getText());
             veiculo.setMarca(txtMarca.getText());
@@ -367,11 +453,14 @@ public class TelaCadastroVeiculo extends javax.swing.JFrame {
             
         }
         
+        // Metodo para adicionar dados na base de dados
         private void adicionarDB(){
             listaVeiculos.forEach(e->{
                 dao.inserir(e);
             });
         }
+        
+        //Metodo para adicionar dados na Tabela da Interface
         private void adicionarTabela(){
             
             DefaultTableModel modelo = (DefaultTableModel)tabela.getModel();
@@ -387,5 +476,5 @@ public class TelaCadastroVeiculo extends javax.swing.JFrame {
             });
         }
 
-        
+    */    
 }

@@ -161,6 +161,7 @@ public class TelaMenu extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCadClienteDiarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadClienteDiarioActionPerformed
